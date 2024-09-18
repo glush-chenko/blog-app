@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Приложение Блог
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект представляет собой простое приложение блога, созданное с использованием React, TypeScript и MobX. Оно позволяет пользователям читать статьи, ставить им лайки, а редакторам - создавать, редактировать и управлять статьями.
 
-## Available Scripts
+## Функциональность
 
-In the project directory, you can run:
+- Аутентификация пользователей (имитация)
+- Список статей
+- Создание и редактирование статей
+- Просмотр статей
+- Функция "лайк"
+- Прикрепление изображений к статьям
 
-### `npm start`
+## Структура проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Проект использует React Router для навигации и MobX для управления состоянием. Основные компоненты:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `LoginPage`: Обрабатывает аутентификацию пользователей
+- `HomePage`: Отображает список статей
+- `ArticlePage`: Показывает полное содержание статьи и позволяет ставить лайки
+- `CreateEditArticlePage`: Обрабатывает создание и редактирование статей
 
-### `npm test`
+## Маршруты
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- /: Главная страница (список статей)
+- /login: Страница входа
+- /article/new: Создание новой статьи
+- /article/edit/:id: Редактирование существующей статьи
+- /article/:id: Просмотр статьи
 
-### `npm run build`
+## Управление состоянием
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Приложение использует MobX для управления состоянием. Основной store - ArticleStore, который обрабатывает операции, связанные со статьями.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Скриншоты
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Просмотр статьи:
+![Screenshot 1](screenshots/01.png)
+![Screenshot 1](screenshots/02.png)
+- Редактирование статьи:
+![Screenshot 1](screenshots/03.jpg)
+- Главная страница:
+![Screenshot 1](screenshots/04.jpg)
